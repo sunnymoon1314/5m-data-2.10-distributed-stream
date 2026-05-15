@@ -8,12 +8,12 @@ FreshCart's delivery team needs real-time visibility. When a rider picks up an o
 
 ## Why this matters
 
-Stream processing is the frontier of data engineering. While batch processing handles the majority of analytical workloads, an increasing number of use cases demand real-time or near-real-time data. Understanding Kafka and Spark Structured Streaming completes your toolkit. It also closes the conceptual loop with Unit 2.2's Lambda/Kappa architectures — now you understand *both* sides.
+Stream processing is the frontier of data engineering. While batch processing handles the majority of analytical workloads, an increasing number of use cases demand real-time or near-real-time data. Understanding Kafka and Spark Structured Streaming completes your toolkit. It also closes the conceptual loop with **Lesson 2.2**'s Lambda/Kappa architectures — now you understand *both* sides.
 
 ## Key concepts
 
 **Apache Kafka** — The backbone of real-time data architectures. Producers write events (e.g., "order placed") to topics. Consumers read events from topics. Offsets track what's been read. For FreshCart, every order, delivery update, and payment event would be published to Kafka topics, creating a single durable event log that multiple teams can consume independently.
 
-**Spark Structured Streaming** — The mental model is powerful: a data stream is just a table that never stops growing. Each new event appends a row. Spark processes this table in micro-batches, applying the same DataFrame API from Unit 2.9. Your batch skills transfer directly to streaming.
+**Spark Structured Streaming** — The mental model is powerful: a data stream is just a table that never stops growing. Each new event appends a row. Spark processes this table in micro-batches, applying the same DataFrame API from **Lesson 2.9**. Your batch skills transfer directly to streaming.
 
-**Connecting Batch and Stream** — This unit closes the loop on the entire module. The data engineering lifecycle (Unit 2.1) has both batch and streaming paths. Lambda architecture (Unit 2.2) runs both in parallel. Kafka feeds both paths. Understanding when to use batch vs stream — and how to unify them — is the architectural judgment that distinguishes a senior data engineer from a junior one.
+**Connecting Batch and Stream** — This unit closes the loop on the entire module. The data engineering lifecycle (**Lesson 2.1**) has both batch and streaming paths. Lambda architecture (**Lesson 2.2**) runs both in parallel. Kafka feeds both paths. Understanding when to use batch vs stream — and how to unify them — is the architectural judgment that distinguishes a senior data engineer from a junior one.
